@@ -7,7 +7,7 @@ function Card({ name, link, likesCount, onCardClick }) {
 
     return (
         <li className="card">
-            <img src={link} alt="" className="card__image" onClick={handleClick} />
+            <img src={link} alt={name} className="card__image" onClick={handleClick} />
             <button type="button" className="card__remove" aria-label="Удалить"></button>
             <div className="card__info">
                 <h2 className="card__description">{name}</h2>

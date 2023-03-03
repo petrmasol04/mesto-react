@@ -28,7 +28,6 @@ function App() {
     setSelectedCard({ name, link, isOpen: true })
   }
 
-
   function closeAllPopups() {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
