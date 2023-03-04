@@ -47,7 +47,6 @@ function App() {
       />
       <Footer />
 
-
       <PopupWithForm
         title={'Редактировать профиль'}
         name={'profile'}
@@ -145,6 +144,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;

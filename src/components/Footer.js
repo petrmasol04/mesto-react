@@ -1,4 +1,5 @@
 function Footer() {
+
     return (
         <footer className="footer">
             <div className="footer__container">
@@ -7,4 +8,5 @@ function Footer() {
         </footer>
     )
 }
+
 export default Footer;
