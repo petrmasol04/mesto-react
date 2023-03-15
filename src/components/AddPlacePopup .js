@@ -6,6 +6,11 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
     const [nameCard, setNameCard] = React.useState('')
     const [linkCard, setLinkCard] = React.useState('')
 
+    React.useEffect(() => {
+        setNameCard('');
+        setLinkCard('');
+    }, [isOpen]);
+
     function handleSubmit(e) {
         e.preventDefault();
         onAddPlace({
@@ -43,6 +48,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
                 minLength={2}
                 maxLength={30}
                 onChange={handleChangeNameCard}
+                value={nameCard || ''}
             />
             <span className="popup__error" id="place-error" />
             <input
@@ -54,6 +60,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
                 placeholder="Сылка на картинка"
                 autoComplete="off"
                 onChange={handleChangeLinkCard}
+                value={linkCard || ''}
             />
             <span className="popup__error" id="url-error" />
         </PopupWithForm>
