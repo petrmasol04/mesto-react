@@ -56,10 +56,10 @@ class Api {
             .then(res => this._handleRequest(res));
     }
 
-    toggleLikeCard(cardId, method) {
+    toggleLikeCard(cardId, isLiked) {
         return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
             headers: this._headers,
-            method
+            method: isLiked ? 'DELETE' : 'PUT'
         })
             .then(res => this._handleRequest(res));
     }
